@@ -1,0 +1,241 @@
+bash: /home/webmaster/.bashrc: Permission denied
+export "PS1=$ "
+
+
+
+$ o Command: $ sysopctl service list
+bash: /home/webmaster/.bashrc: Permission denied
+export "PS1=$ "
+
+$ View System Load:
+#!/bin/bash
+
+# Function to list running services
+function service_list() {
+    echo "Listing active services..."
+    systemctl list-units --type=service --state=running
+}
+
+# Function to view system load
+function system_load() {
+    echo "Current system load averages:"
+    uptime
+}
+
+# Main function to parse arguments
+function main() {
+    if [ "$1" == "service" ] && [ "$2" == "list" ]; then
+        service_list
+    elif [ "$1" == "system" ] && [ "$2" == "load" ]; then
+        system_load
+    else
+        echo "Usage: sysopctl service list or sysopctl system load"
+    fi
+}
+
+# Execute main function with all arguments
+main "$@"
+bash: /home/webmaster/.bashrc: Permission denied
+View System Load:
+
+bash: View: command not found
+export "PS1=$ "
+
+$ ./sysopctl.sh system load
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh system load
+
+bash: ./sysopctl.sh: No such file or directory
+export "PS1=$ "
+
+$ 
+#!/bin/bash
+
+# Function to list running services
+function service_list() {
+    echo "Listing active services..."
+    systemctl list-units --type=service --state=running
+}
+
+# Function to view system load
+function system_load() {
+    echo "Current system load averages:"
+    uptime
+}
+
+# Function to start a service
+function service_start() {
+    if [ -z "$1" ]; then
+        echo "Usage: sysopctl service start <service-name>"
+        return 1
+    fi
+    echo "Starting service '$1'..."
+    if systemctl start "$1"; then
+        echo "Service '$1' started successfully."
+    else
+        echo "Failed to start service '$1'."
+    fi
+}
+
+# Function to stop a service
+function service_stop() {
+    if [ -z "$1" ]; then
+        echo "Usage: sysopctl service stop <service-name>"
+        return 1
+    fi
+    echo "Stopping service '$1'..."
+    if systemctl stop "$1"; then
+        echo "Service '$1' stopped successfully."
+    else
+        echo "Failed to stop service '$1'."
+    fi
+}
+
+# Function to check disk usage
+function disk_usage() {
+    echo "Disk usage statistics by partition:"
+    df -h
+}
+
+# Function to monitor system processes
+function process_monitor() {
+    echo "Monitoring real-time process activity (press Ctrl+C to exit)..."
+    top
+}
+
+# Function to analyze system logs
+function logs_analyze() {
+    echo "Summary of recent critical log entries:"
+    journalctl -p crit -n 10
+}
+
+# Function to backup system files
+function backup() {
+    if [ -z "$1" ]; then
+        echo "Usage: sysopctl backup <path>"
+        return 1
+    fi
+    echo "Backing up files from '$1'..."
+    # Specify your backup destination here
+    BACKUP_DEST="/path/to/backup/destination"
+    if rsync -av --progress "$1" "$BACKUP_DEST"; then
+        echo "Backup of '$1' initiated successfully."
+    else
+        echo "Backup failed."
+    fi
+}
+
+# Main function to parse arguments
+function main() {
+    case "$1" in
+        service)
+            if [ "$2" == "list" ]; then
+                service_list
+            elif [ "$2" == "start" ]; then
+                service_start "$3"
+            elif [ "$2" == "stop" ]; then
+                service_stop "$3"
+            else
+                echo "Usage: sysopctl service list|start|stop <service-name>"
+            fi
+            ;;
+        system)
+            if [ "$2" == "load" ]; then
+                system_load
+            else
+                echo "Invalid system command."
+            fi
+            ;;
+        disk)
+            if [ "$2" == "usage" ]; then
+                disk_usage
+            else
+                echo "Invalid disk command."
+            fi
+            ;;
+        process)
+            if [ "$2" == "monitor" ]; then
+                process_monitor
+            else
+                echo "Invalid process command."
+            fi
+            ;;
+        logs)
+            if [ "$2" == "analyze" ]; then
+                logs_analyze
+            else
+                echo "Invalid logs command."
+            fi
+            ;;
+        backup)
+            backup "$2"
+            ;;
+        *)
+            echo "Unknown command: $1"
+            echo "Usage: sysopctl <command> [options]"
+            ;;
+    esac
+}
+
+# Execute main function with all arguments
+main "$@"
+bash: /home/webmaster/.bashrc: Permission denied
+export "PS1=$ "
+
+$ ./sysopctl.sh service list
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh service list
+
+bash: ./sysopctl.sh: No such file or directory
+export "PS1=$ "
+
+$ ./sysopctl.sh service start <service-name>
+
+bash: syntax error near unexpected token `newline'
+$ 
+
+$ 
+
+$ ./sysopctl.sh service stop <service-name>
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh service stop <service-name>
+
+bash: syntax error near unexpected token `newline'
+export "PS1=$ "
+
+$ ./sysopctl.sh disk usage
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh disk usage
+
+bash: ./sysopctl.sh: No such file or directory
+export "PS1=$ "
+
+$ ./sysopctl.sh process monitor
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh process monitor
+
+bash: ./sysopctl.sh: No such file or directory
+export "PS1=$ "
+
+$ ./sysopctl.sh logs analyze
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh logs analyze
+
+bash: ./sysopctl.sh: No such file or directory
+export "PS1=$ "
+
+$ ./sysopctl.sh backup <path>
+
+bash: /home/webmaster/.bashrc: Permission denied
+./sysopctl.sh backup <path>
+
+bash: syntax error near unexpected token `newline'
+export "PS1=$ "
+
+$ 
