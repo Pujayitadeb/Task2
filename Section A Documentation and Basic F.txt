@@ -1,0 +1,203 @@
+Section A: Documentation and Basic Features
+Manual Page:
+o Create a detailed manual page for sysopctl so users can access full
+documentation using man sysopctl.
+
+
+code
+
+.TH SYSOPCTL 1 "October 2024" "v0.1.0" "System Operations Control"
+.SH NAME
+sysopctl \- Manage system resources, services, and health
+.SH SYNOPSIS
+.B sysopctl
+[\fIoptions\fR]
+.SH DESCRIPTION
+.B sysopctl
+is a command-line utility to manage system resources, services, and health. It provides various functionalities for monitoring and controlling system operations.
+.SH OPTIONS
+.TP
+.B --help
+Display this help message and exit.
+.TP
+.B --version
+Show the version of sysopctl.
+.SH EXAMPLES
+.B sysopctl --help
+.br
+.B sysopctl --version
+.SH AUTHOR
+Written by [Your Name].
+
+
+output
+bash: /home/webmaster/.bashrc: Permission denied
+.TH SYSOPCTL 1 "October 2024" "v0.1.0" "System Operations Control"
+
+bash: .TH: command not found
+.SH NAME
+
+bash: .SH: command not found
+sysopctl \- Manage system resources, services, and health
+
+bash: sysopctl: command not found
+.SH SYNOPSIS
+
+bash: .SH: command not found
+.B sysopctl
+
+bash: .B: command not found
+[\fIoptions\fR]
+
+bash: [fIoptionsfR]: command not found
+.SH DESCRIPTION
+
+bash: .SH: command not found
+.B sysopctl
+
+bash: .B: command not found
+
+
+.
+
+bash: is: command not found
+export "PS1=$ "
+.SH OPTIONS
+
+bash: .SH: command not found
+.TP
+
+bash: .TP: command not found
+.B --help
+
+bash: .B: command not found
+Display this help message and exit.
+
+bash: Display: command not found
+.TP
+
+bash: .TP: command not found
+.B --version
+
+bash: .B: command not found
+Show the version of sysopctl.
+
+bash: Show: command not found
+.SH EXAMPLES
+
+bash: .SH: command not found
+.B sysopctl --help
+
+bash: .B: command not found
+.br
+
+bash: .br: command not found
+.B sysopctl --version
+
+bash: .B: command not found
+.SH AUTHOR
+
+bash: .SH: command not found
+Written by [Your Name].
+
+bash: Written: command not found
+export "PS1=$ "
+
+$ 
+
+
+OUtput
+$ #!/bin/bash
+
+show_help() {
+    echo "Usage: sysopctl [options]"
+    echo ""
+    echo "Options:"
+    echo "  --help       Show this help message and exit."
+    echo "  --version    Show the version of sysopctl."
+}
+
+if [[ "$1" == "--help" ]]; then
+    show_help
+    exit 0
+fi
+
+bash: /home/webmaster/.bashrc: Permission denied
+#!/bin/bash
+
+show_help() {
+
+> 
+
+>     echo "Usage: sysopctl [options]"
+
+> 
+>     echo ""
+
+> 
+
+> echo "Options:"
+
+> 
+
+> echo "  --help       Show this help message and exit."
+
+> > echo "  --version    Show the version of sysopctl."
+
+> 
+
+> }
+
+if [[ "$1" == "--help" ]]; then
+
+> 
+
+> show_help
+
+> 
+
+>     exit 0
+
+> 
+
+> fi
+
+
+
+export "PS1=$ "
+
+$ 
+$version option
+bash: ersion: command not found
+$ VERSION="v0.1.0"
+
+if [[ "$1" == "--version" ]]; then
+    echo "sysopctl version $VERSION"
+    exit 0
+fi
+
+VERSION="v0.1.0"
+
+$ $ 
+
+$ 
+
+$ if [[ "$1" == "--version" ]]; then
+
+> 
+
+>     echo "sysopctl version $VERSION"
+
+> 
+
+>     exit 0
+
+> 
+
+> fi
+
+$ 
+
+$ 
+
+$ 
